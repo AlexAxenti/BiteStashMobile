@@ -26,7 +26,6 @@ export const useHomeStyles = () => {
       padding: 6,
     },
     settingsIcon: {
-      fontSize: 22,
       color: colors.icon,
     },
     tabBar: {
@@ -57,9 +56,13 @@ export const useHomeStyles = () => {
     sortRow: {
       flexDirection: 'row',
       alignItems: 'center',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
       paddingHorizontal: 20,
       paddingBottom: 6,
+    },
+    sortLeft: {
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     sortLabel: {
       fontSize: 12,
@@ -79,10 +82,15 @@ export const useHomeStyles = () => {
       color: colors.text,
       fontWeight: '500',
     },
+    sortDirButton: {
+      paddingHorizontal: 10,
+      paddingVertical: 4,
+      borderRadius: 6,
+      backgroundColor: colors.surface,
+    },
     sortArrow: {
       fontSize: 16,
       color: colors.textMuted,
-      marginLeft: 4,
     },
     listContent: {
       paddingHorizontal: 20,

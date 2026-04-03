@@ -28,7 +28,7 @@ export default function EntryCard({ entry, onPress }: EntryCardProps) {
           <Text style={styles.metaText}>Visited {visitedDate}</Text>
         )}
         {entry.notes ? (
-          <Text style={styles.metaText} numberOfLines={1}>📝 {entry.notes}</Text>
+          <Text style={styles.metaTextNotes} numberOfLines={1}>📝 {entry.notes}</Text>
         ) : null}
       </View>
     </TouchableOpacity>

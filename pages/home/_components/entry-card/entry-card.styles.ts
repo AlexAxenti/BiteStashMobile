@@ -32,6 +32,12 @@ export const useEntryCardStyles = () => {
     metaText: {
       fontSize: 12,
       color: colors.textMuted,
+      flexShrink: 0,
+    },
+    metaTextNotes: {
+      fontSize: 12,
+      color: colors.textMuted,
+      flex: 1,
     },
     ratingText: {
       fontSize: 12,

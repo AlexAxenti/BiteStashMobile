@@ -1,5 +1,6 @@
 import { EntryStatus, RestaurantEntry } from '@/api/models/restaurant-entry';
 import { useRestaurantEntriesQuery } from '@/hooks/queries/use-restaurant-entries-query';
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import {
@@ -114,7 +115,7 @@ export default function HomePage() {
       <View style={styles.header}>
         <Text style={styles.headerTitle}>My Restaurants</Text>
         <TouchableOpacity style={styles.settingsButton} onPress={handleSettingsPress}>
-          <Text style={styles.settingsIcon}>⚙</Text>
+          <Ionicons name="settings-outline" size={24} color={styles.settingsIcon.color} />
         </TouchableOpacity>
       </View>
 
@@ -140,12 +141,14 @@ export default function HomePage() {
 
       {/* Sort controls */}
       <View style={styles.sortRow}>
-        <Text style={styles.sortLabel}>Sort:</Text>
-        <TouchableOpacity style={styles.sortButton} onPress={cycleSortOption}>
-          <Text style={styles.sortButtonText}>{sortLabel}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={toggleSortDir}>
-          <Text style={styles.sortArrow}>{sortDir === 'desc' ? ' ↓' : ' ↑'}</Text>
+        <View style={styles.sortLeft}>
+          <Text style={styles.sortLabel}>Sort:</Text>
+          <TouchableOpacity style={styles.sortButton} onPress={cycleSortOption}>
+            <Text style={styles.sortButtonText}>{sortLabel}</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={styles.sortDirButton} onPress={toggleSortDir}>
+          <Text style={styles.sortArrow}>{sortDir === 'desc' ? '↓' : '↑'}</Text>
         </TouchableOpacity>
       </View>
 

@@ -9,7 +9,7 @@ export const useAddModalStyles = () => {
   return StyleSheet.create({
     overlay: {
       flex: 1,
-      justifyContent: 'flex-start',
+      justifyContent: 'flex-end',
     },
     backdrop: {
       ...StyleSheet.absoluteFillObject,
@@ -20,18 +20,30 @@ export const useAddModalStyles = () => {
     modal: {
       maxHeight: SCREEN_HEIGHT / 3,
       backgroundColor: colors.surface,
-      borderBottomLeftRadius: 20,
-      borderBottomRightRadius: 20,
-      paddingTop: 80,
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+      paddingTop: 20,
       paddingHorizontal: 24,
-      paddingBottom: 24,
-      borderBottomWidth: 2,
-      borderBottomColor: colors.border,
+      paddingBottom: 40,
+      borderTopWidth: 2,
+      borderTopColor: colors.border,
       shadowColor: '#000',
-      shadowOffset: { width: 0, height: 4 },
+      shadowOffset: { width: 0, height: -4 },
       shadowOpacity: 0.3,
       shadowRadius: 6,
       elevation: 8,
+    },
+    closeButton: {
+      position: 'absolute',
+      top: 12,
+      right: 16,
+      zIndex: 1,
+      padding: 4,
+    },
+    closeButtonText: {
+      fontSize: 18,
+      fontWeight: '700',
+      color: colors.danger,
     },
     manualButton: {
       backgroundColor: colors.accent,

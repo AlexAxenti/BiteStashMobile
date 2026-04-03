@@ -18,13 +18,6 @@ export default function AddModalPage() {
         <BlurView intensity={30} tint="dark" style={styles.blur} />
       </Pressable>
       <View style={styles.modal}>
-        <TouchableOpacity style={styles.manualButton} onPress={handleManual} activeOpacity={0.8}>
-          <Text style={styles.manualButtonText}>Input Manually</Text>
-        </TouchableOpacity>
-
-        <View style={styles.dividerRow}>
-          <View style={styles.divider} />
-        </View>
 
         <TextInput
           style={styles.searchInput}
@@ -32,6 +25,14 @@ export default function AddModalPage() {
           placeholderTextColor="#999"
           editable={false}
         />
+
+        <View style={styles.dividerRow}>
+          <View style={styles.divider} />
+        </View>
+
+        <TouchableOpacity style={styles.manualButton} onPress={handleManual} activeOpacity={0.8}>
+          <Text style={styles.manualButtonText}>Input Manually</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
