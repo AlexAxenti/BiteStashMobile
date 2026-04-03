@@ -8,7 +8,7 @@ export default function GetStartedPage() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Restaurant Tracker</Text>
+      <Text style={styles.title}>BiteStash</Text>
       <Text style={styles.subtitle}>Keep track of the places you love and want to visit.</Text>
       <TouchableOpacity style={styles.button} onPress={() => router.push('/login')}>
         <Text style={styles.buttonText}>Log In</Text>
